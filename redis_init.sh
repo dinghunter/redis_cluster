@@ -1,4 +1,6 @@
 #!/bin/bash
+#Init Redis env
+#Version:1.0.1
  usage ()
  { echo "usage:$0 port
   eg:$0 10000" 
