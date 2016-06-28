@@ -1,0 +1,16 @@
+redis-trib.rb add-node 127.0.0.1:7006 127.0.0.1:7000
+
+redis-trib.rb reshard 127.0.0.1:7002
+
+add-node --slave 127.0.0.1:7007 127.0.0.1:7006
+
+[root@MSJTVL-YWCS-A01 7007]# redis-trib.rb del-node 127.0.0.1:7007 bf24bae991b1464d8c3cf73c50754e73439785d2
+>>> Removing node bf24bae991b1464d8c3cf73c50754e73439785d2 from cluster 127.0.0.1:7007
+>>> Sending CLUSTER FORGET messages to the cluster...
+>>> SHUTDOWN the node.
+
+[root@MSJTVL-YWCS-A01 7007]# redis-trib.rb del-node 127.0.0.1:7006 9f10b8a902d27bebd25daa06199b488cf18d607e
+>>> Removing node 9f10b8a902d27bebd25daa06199b488cf18d607e from cluster 127.0.0.1:7006
+[ERR] Node 127.0.0.1:7006 is not empty! Reshard data away and try again.
+
+[root@MSJTVL-YWCS-A01 7007]# redis-trib.rb reshard 127.0.0.1:7006
