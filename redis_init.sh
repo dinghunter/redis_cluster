@@ -1,5 +1,5 @@
 #!/bin/bash
-#Init Redis env
+#Init Redis env,copy redis conf to datadir and modify conf file
 #Version:1.0.1
  usage ()
  { echo "usage:$0 port
