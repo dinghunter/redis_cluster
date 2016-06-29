@@ -1,5 +1,5 @@
 #!/bin/bash
-#Install Redis Cluster Env,include redis cluster ,ruby ,rubygems,openssl
+#Install Redis Cluster Env,include install redis cluster ,ruby ,rubygems,openssl
 
 #Yum install gcc and zlib-devel
 set +x
